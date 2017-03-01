@@ -49,7 +49,7 @@ public class MyAsincTask extends AsyncTask<String,Void,Boolean> {
     protected void onPostExecute(Boolean aBoolean) {
         progressDialog.dismiss();
         if (aBoolean){
-            builder.setMessage("imagen subida al servidor").setTitle("JC le informa").setNeutralButton("Aceptar", new DialogInterface.OnClickListener() {
+            builder.setMessage("imagen subida al servidor").setTitle("Subiendo").setNeutralButton("Aceptar", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();
@@ -59,7 +59,7 @@ public class MyAsincTask extends AsyncTask<String,Void,Boolean> {
         }
         else {
 
-            builder.setMessage("no se pudo abrir la imagen").setTitle("JC le informa").setNeutralButton("Aceptar", new DialogInterface.OnClickListener() {
+            builder.setMessage("no se pudo abrir la imagen").setTitle("Subiendo").setNeutralButton("Aceptar", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
                     dialog.cancel();
